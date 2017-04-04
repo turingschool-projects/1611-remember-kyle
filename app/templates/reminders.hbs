@@ -1,0 +1,11 @@
+<h2>Reminder page</h2>
+
+{{#each model as |reminder|}}
+  <div class="reminder-item">
+    <h3>{{reminder.title}}</h3>
+    <p>{{reminder.date}}</p>
+    <p>{{reminder.notes}}</p>
+  </div>
+{{/each}}
+
+{{outlet}}
