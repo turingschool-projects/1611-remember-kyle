@@ -4,6 +4,10 @@
   <h3 class="reminder-title">{{model.title}}</h3>
   <p>{{model.date}}</p>
   <p>{{model.notes}}</p>
+  {{#link-to 'reminders.edit' model}}
+    <button id="edit-reminder-button">Edit</button>
+  {{/link-to}}
+  <button {{action "delete" model}} class="delete-reminder-button"> Delete </button>
 </div>
 
 {{outlet}}
