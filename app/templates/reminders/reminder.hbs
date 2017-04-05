@@ -7,6 +7,7 @@
   {{#link-to 'reminders.edit' model}}
     <button id="edit-reminder-button">Edit</button>
   {{/link-to}}
+  <button {{action "delete" model}}> Delete </button>
 </div>
 
 {{outlet}}
