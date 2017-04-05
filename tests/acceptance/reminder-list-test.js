@@ -38,4 +38,24 @@ test('Display prompt if no reminders are present', function(assert) {
   });
 });
 
+test('edit on an individual item', function(assert) {
+  server.createList('reminder', 1);
+
+  visit('/reminders');
+  click('.reminder-item:first');
+  click('#edit-reminder-button');
+
+  andThen(() => {
+    assert.equal(currentURL(), '/reminders/reminder/edit/1')
+  })
+
+  fillIn('#title-input', 'Remember this');
+  click('#save-reminder-button');
+  
+  andThen(function() {
+    assert.equal(currentURL(), '/reminders');
+    assert.equal(Ember.$('.reminder-item:first').text().trim(), 'Remember this');
+  });
+});
+
 
