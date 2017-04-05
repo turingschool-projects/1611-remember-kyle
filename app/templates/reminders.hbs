@@ -1,18 +1,18 @@
 <h2>Reminder page</h2>
 {{outlet}}
 
-{{#if model}}
-  <h3>All reminders</h3>
-  {{#each model as |reminder|}}
-    {{#link-to "reminders.reminder" reminder}}
-    <div class="reminder-item">
-      <h4>{{reminder.title}}</h4>
-    </div>
-    {{/link-to}}
-  {{/each}}
+
+<h3>All reminders</h3>
+{{#each model as |reminder|}}
+  {{#link-to "reminders.reminder" reminder}}
+  <div class="reminder-item">
+    <h4>{{reminder.title}}</h4>
+  </div>
+  {{/link-to}}
 {{else}}
   <p class="no-reminders-notice">No reminders, click below to enter one.</p>
-{{/if}}
+{{/each}}
+
 
 {{#link-to "reminders.new"}}
   <button>Make a new Idea</button>
