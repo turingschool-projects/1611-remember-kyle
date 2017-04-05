@@ -6,8 +6,7 @@ export default Ember.Controller.extend({
       const title = this.get('title')
       const date = this.get('date')
       const notes = this.get('notes')
-      console.log(title, date, notes)
-      this.post('store')
+      this.get('store').createRecord('reminder', { title, date, notes })
     }
   }
 });

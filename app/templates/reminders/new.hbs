@@ -1,13 +1,5 @@
 <h2>Make a new Reminder... in a box</h2>
-{{input valueBinding="title" type="text" placeholder="Title"}}
-{{input valueBinding="date" type="text" placeholder="Date"}}
-{{input valueBinding="notes" type="text" placeholder="Reminder"}}
-<!-- {{input type="button" action="saveReminder" value="Add Reminder"}} -->
-<button {{action "saveReminder" 'hey'}}>save reminder test</button>
-
-
-
-
-
-
-{{outlet}}
+{{input id="title-input" valueBinding="title" type="text" placeholder="Title"}}
+{{input id="date-input" valueBinding="date" type="text" placeholder="Date"}}
+{{input id="notes-input" valueBinding="notes" type="text" placeholder="Reminder"}}
+<button  id="add-reminder-button" {{action "saveReminder"}}>save reminder</button>
