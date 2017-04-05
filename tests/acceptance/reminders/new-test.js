@@ -5,11 +5,11 @@ moduleForAcceptance('Acceptance | reminders/new');
 
 test('enter text into inputs and click summbit, new reminder appears on page', function(assert) {
   visit('/reminders/new');
-  fillIn('#title-input', 'Remember this')
-  fillIn('#date-input', 'on this day')
-  fillIn('#notes-input', 'here are the details')
+  fillIn('#title-input', 'Remember this');
+  fillIn('#date-input', 'on this day');
+  fillIn('#notes-input', 'here are the details');
 
-  click('#add-reminder-button')
+  click('#add-reminder-button');
 
   andThen(function() {
     assert.equal(currentURL(), '/reminders/new');
