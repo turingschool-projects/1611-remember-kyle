@@ -29,3 +29,14 @@ test('clicking on an individual item', function(assert) {
     assert.equal(Ember.$('.reminder-item:first').text().trim(), Ember.$('.reminder-title').text().trim());
   });
 });
+
+test('Display prompt if no reminders are present', function(assert) {
+
+  visit('/reminders');
+
+  andThen(function() {
+    assert.equal(Ember.$('.no-reminders-notice').length, 1);
+  });
+});
+
+
