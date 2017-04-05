@@ -31,7 +31,6 @@ test('clicking on an individual item', function(assert) {
 });
 
 test('Display prompt if no reminders are present', function(assert) {
-
   visit('/reminders');
 
   andThen(function() {
