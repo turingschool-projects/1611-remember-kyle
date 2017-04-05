@@ -4,12 +4,13 @@
 
 <h3>All reminders</h3>
 {{#each model as |reminder|}}
-  <div class="reminder-item">
-    {{#link-to "reminders.reminder" reminder}}
-    <h4>{{reminder.title}}</h4>
-    {{/link-to}}
-    <button {{action "delete" reminder}}> Delete </button>
-  </div>
+  {{#link-to "reminders.reminder" reminder}}
+    <div class="reminder-item">
+      <h4>{{reminder.title}}</h4>
+    </div>
+  {{/link-to}}
+  <button {{action "delete" reminder}} class="delete-reminder-button"> Delete </button>
+
 {{else}}
   <p class="no-reminders-notice">No reminders, click below to enter one.</p>
 {{/each}}
