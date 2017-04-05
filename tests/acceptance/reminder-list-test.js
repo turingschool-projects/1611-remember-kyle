@@ -35,7 +35,7 @@ test('Display prompt if no reminders are present', function(assert) {
   visit('/reminders');
 
   andThen(function() {
-    assert.equal(Ember.$('.no-reminders-notice').length, 1);
+    assert.equal(find('.no-reminders-notice').length, 1);
   });
 });
 
