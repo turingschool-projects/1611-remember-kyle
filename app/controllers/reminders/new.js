@@ -7,7 +7,7 @@ export default Ember.Controller.extend({
       const date = this.get('date');
       const notes = this.get('notes');
       this.get('store').createRecord('reminder', { title, date, notes }).save().then(() => {
-        this.setProperties({title: '', date: '', notes: ''})
+        this.setProperties({title: '', date: '', notes: ''});
       })
     }
   }
