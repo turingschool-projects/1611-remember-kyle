@@ -1,6 +1,6 @@
-<h2>Edit an old Reminder... in a box</h2>
-{{input id="title-input" value=model.title valueBinding="title" type="text" placeholder="Title"}}
-{{input id="date-input" value=model.title valueBinding="date" type="text" placeholder="Date"}}
-{{input id="notes-input" value=model.title valueBinding="notes" type="text" placeholder="Reminder"}}
-<!-- <button  id="add-reminder-button" {{action "saveReminder"}}>save reminder</button>
+<h5>Editing reminder</h5>
+{{input id="title-input" valueBinding=model.title type="text"}}
+{{input id="date-input" valueBinding=model.date type="text" }}
+{{input id="notes-input" valueBinding=model.notes type="text" }}
+<button  id="save-reminder-button" {{action "updateReminder"}}>save</button>
 
